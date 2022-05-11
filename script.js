@@ -43,7 +43,10 @@ select.addEventListener('change', function() {
 })
 
 
-   resetBtn.addEventListener('click', function () {
+
+   resetBtn.addEventListener('click', reset);
+
+   function reset () {
       isGameOver = false;
       maxScore = 0;
       player1Score = 0;
@@ -51,12 +54,11 @@ select.addEventListener('change', function() {
       select.selectedIndex = 0;
       player1ScoreEl.innerHTML = `${player1Score}`;
       player2ScoreEl.innerHTML = `${player2Score}`;
-      player1ScoreEl.classList.remove('green', 'red');
-      player2ScoreEl.classList.remove('green', 'red');
-      player1Btn.classList.remove('disabled');
-      player2Btn.classList.remove('disabled');
-   })
-
+      // player1ScoreEl.classList.remove('green', 'red');
+      // player2ScoreEl.classList.remove('green', 'red');
+      // player1Btn.classList.remove('disabled');
+      // player2Btn.classList.remove('disabled');
+   }
 
 
 
