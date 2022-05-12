@@ -22,8 +22,10 @@ player1Btn.addEventListener('click', function(){
       player1Score +=1;
       if (player1Score === maxScore) {
          isGameOver = true;
-         player1ScoreEl.classList.add('winner');
-         player2ScoreEl.classList.add('looser');
+         player1ScoreEl.classList.add('has-text-success');
+         player2ScoreEl.classList.add('has-text-danger');
+         player1Btn.disabled = true;
+         player2Btn.disabled = true;
       }
       player1ScoreEl.innerHTML = `${player1Score}`;
    }
@@ -35,8 +37,10 @@ player2Btn.addEventListener('click', function(){
       player2Score +=1;
       if (player2Score === maxScore) {
          isGameOver = true;
-         player2ScoreEl.classList.add('winner');
-         player1ScoreEl.classList.add('looser');
+         player2ScoreEl.classList.add('has-text-success');
+         player1ScoreEl.classList.add('has-text-danger');
+         player1Btn.disabled = true;
+         player2Btn.disabled = true;
       }
       player2ScoreEl.innerHTML = `${player2Score}`;
    }
@@ -57,6 +61,8 @@ function reset (){
 
 function newGame() {
    scoreSelect.selectedIndex = 0;
-   player1ScoreEl.classList.remove('winner', 'looser');
-   player2ScoreEl.classList.remove('winner','looser');
+   player1ScoreEl.classList.remove('has-text-success', 'has-text-danger');
+   player2ScoreEl.classList.remove('has-text-success','has-text-danger');
+   player1Btn.disabled = false;
+   player2Btn.disabled = false;
 }
