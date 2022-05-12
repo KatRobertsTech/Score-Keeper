@@ -5,44 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Score Keeper</title>
-    <style>
-      .winner {
-        color: green;
-      }
-      .looser {
-        color: red;
-      }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
   <body>
+
+
+  <section class="section">
     <div class="container">
-      <div class="top-image">
-      </div>
-      <div class="bottom-section">
-        <h1>Ping Pong Score Keeper</h1>
-        <div class = "score">
-          <h2 div="display"><span id="player1-score-el">0</span> to <span id="player2-score-el">0</span></h2>
-        </div>
-        <div class="dropdown">
-          <label for="number"><h3>Playing to:</h3></label>
-          <select name="max" id="score-select">
-            <option value=""></option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-          </select>
-          <p id="select-result"></p>
-        </div>
-        <div class="button-div">
-          <button id="player1-btn">+1 Player 1</button>
-          <button id="player2-btn">+1 Player 2</button>
-          <button id="reset-btn">Reset</button>
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-2by1">
+                <img src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270&q=80" alt="ping pong">
+              </figure>
+            </div>
+            <header class="card-header">
+              <p class="card-header-title">
+                Ping Pong Score Keeper
+              </p>
+              <button class="card-header-icon" aria-label="more options">
+                <span class="icon">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </button>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                <h1 class="is-size-1 title is-1"><span id="player1-score-el">0</span> to <span id="player2-score-el">0</span></h1>
+                <p class="subtitle">Use the buttons below to keep score!</p>
+                <label for="number" class="label is-small is-inline"><h3>Playing to:</h3></label>
+                <div class="select is-rounded">
+                  <select name="max" id="score-select">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <button id="player1-btn" class="is-primary button is-large card-footer-item">+1 Player 1</button>
+              <button id="player2-btn" class="is-info button is-large card-footer-item">+1 Player 2</button>
+              <button id="reset-btn" class="is-danger button is-large card-footer-item">Reset</button>
+            </footer>
+          </div>
         </div>
       </div>
     </div>
+
+  </section>  
+
 
     <script src="script.js"></script>
   </body>
